@@ -4,9 +4,12 @@
   --primary-hover: #4338ca;
   --bg-app: #F8FAFC;
   --bg-card: #FFFFFF;
-  --text-main: #0f172a;    /* כחול-שחור עמוק לכל הטקסטים */
-  --text-muted: #334155;   /* אפור כהה מאוד */
-  --accent-yellow: #fbbf24; /* צהוב לכפתור הוספה */
+  --text-main: #0f172a;
+  /* כחול-שחור עמוק לכל הטקסטים */
+  --text-muted: #334155;
+  /* אפור כהה מאוד */
+  --accent-yellow: #fbbf24;
+  /* צהוב לכפתור הוספה */
   --success-green: #10B981;
   --danger-red: #EF4444;
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
@@ -26,7 +29,8 @@
   padding: 0 2rem;
   font-family: 'Segoe UI', system-ui, sans-serif;
   color: var(--text-main);
-  direction: rtl; /* יישור לימין לעברית */
+  direction: rtl;
+  /* יישור לימין לעברית */
 }
 
 /* --- 3. כותרת עליונה (מתוקן - בלי מתיחות) --- */
@@ -51,9 +55,11 @@
   width: 50px !important;
   height: 50px !important;
   border-radius: 50% !important;
-  border: 2px solid #b45309 !important; /* מסגרת חומה כהה */
+  border: 2px solid #b45309 !important;
+  /* מסגרת חומה כהה */
   background-color: var(--accent-yellow) !important;
-  color: #0f172a !important; /* טקסט שחור */
+  color: #0f172a !important;
+  /* טקסט שחור */
   font-size: 1.5rem;
   cursor: pointer;
   display: flex;
@@ -65,13 +71,15 @@
 }
 
 .circle-btn:hover {
-  background-color: #ffffff !important; /* הופך ללבן בריחוף כפי שביקשת */
+  background-color: #ffffff !important;
+  /* הופך ללבן בריחוף כפי שביקשת */
   transform: rotate(90deg) scale(1.1);
   box-shadow: var(--shadow-lg);
 }
 
 /* --- 5. תיבת יצירה והוספת חבר --- */
-.create-team-box, .add-member-box {
+.create-team-box,
+.add-member-box {
   background: var(--bg-card);
   padding: 1.5rem;
   border-radius: var(--radius-md);
@@ -91,12 +99,20 @@
 
 .add-member-box label {
   font-weight: 700;
-  color: #7c2d12; /* חום כהה */
+  color: #7c2d12;
+  /* חום כהה */
 }
 
 @keyframes slideDown {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* --- 6. גריד וכרטיסי צוות --- */
@@ -153,7 +169,8 @@
 }
 
 /* --- 8. כפתורים, אינפוטים וסלקטים (בלי כתב לבן!) --- */
-input, select {
+input,
+select {
   width: 100%;
   padding: 0.8rem;
   border: 2px solid #e2e8f0;
@@ -173,7 +190,8 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #0f172a !important; /* טקסט כהה תמיד */
+  color: #0f172a !important;
+  /* טקסט כהה תמיד */
 }
 
 /* כפתור "צפה בפרויקטים" */
@@ -185,7 +203,8 @@ button {
 
 .enter-btn:hover {
   background-color: var(--primary) !important;
-  color: #ffffff !important; /* כאן מותר לבן כי הרקע נהיה כחול כהה מאוד */
+  color: #ffffff !important;
+  /* כאן מותר לבן כי הרקע נהיה כחול כהה מאוד */
 }
 
 /* כפתורי ביטול */
@@ -195,7 +214,8 @@ button {
 }
 
 /* כפתורי אישור (כחול בהיר עם טקסט כהה) */
-.btn-primary, .create-team-box button {
+.btn-primary,
+.create-team-box button {
   background-color: #818cf8 !important;
 }
 
@@ -213,4 +233,39 @@ button:disabled {
   color: #1e40af;
   border-radius: var(--radius-md);
   grid-column: 1 / -1;
+}
+
+.member-item {
+  display: flex;
+  justify-content: space-between;
+  /* דוחף את השם לימין וה-X לשמאל */
+  align-items: center;
+  padding: 8px 12px;
+  background: #f1f5f9;
+  border-radius: 6px;
+  margin-bottom: 5px;
+  transition: background 0.2s;
+}
+
+.member-item:hover {
+  background: #e2e8f0;
+}
+
+.remove-member-btn {
+  background: none !important;
+  border: none !important;
+  color: #94a3b8 !important;
+  /* אפור עדין */
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0 5px !important;
+  width: auto !important;
+  /* שלא יתפוס חצי כרטיס */
+  box-shadow: none !important;
+}
+
+.remove-member-btn:hover {
+  color: #ef4444 !important;
+  /* הופך לאדום רק כשנוגעים בו */
+  transform: scale(1.2);
 }

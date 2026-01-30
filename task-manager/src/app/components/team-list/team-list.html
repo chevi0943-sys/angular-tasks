@@ -53,9 +53,20 @@
         } @else if (team.members.length === 0) {
         <p>אין עדיין חברים בצוות זה.</p>
         } @else {
-        <ul>
+        <!-- <ul>
           @for (member of team.members; track member.id) {
           <li>{{ member.name }}</li>
+          }
+        </ul> -->
+
+        <ul>
+          @for (member of team.members; track member.id) {
+          <li class="member-item">
+            <span>{{ member.name }}</span>
+            <button class="remove-member-btn" (click)="onRemoveMember(team.id, member.id)" title="הסר חבר">
+              ✖
+            </button>
+          </li>
           }
         </ul>
         }
