@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  apiUrl: 'https://angular-tasks-1.onrender.com' 
+  apiUrl: 'https://task-project-azk0.onrender.com/' 
 };
