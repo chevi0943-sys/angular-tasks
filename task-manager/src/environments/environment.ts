@@ -1,4 +1,5 @@
 export const environment = {
   production: false,
-  apiUrl: 'https://task-project-azk0.onrender.com/' 
+  apiUrl: 'http://localhost:3000/api' // כתובת ה-API המקומית לפיתוח
 };
+
