@@ -1,0 +1,160 @@
+/* -- עיצוב כללי לעוטף של האפליקציה -- */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  direction: rtl; /* יישור לימין לכל האתר */
+  background-color: #f4f7f6; /* רקע עדין ובהיר לאזור התוכן */
+}
+
+/* -- סרגל הניווט (ההדר) -- */
+.main-nav {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 15px 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* צלית עדינה בתחתית */
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* מוודא שההדר תמיד מעל התוכן נגלל */
+}
+
+/* טקסט הברכה בצד ימין */
+.user-welcome {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-left: 40px; /* מרחיק את הקישורים מטקסט הברכה */
+}
+
+/* -- אזור הקישורים (צוותים, פרויקטים, משימות) -- */
+.nav-links {
+  display: flex;
+  gap: 15px; /* פותר את הבעיה של הטקסטים הדבוקים! */
+  flex: 1; /* לוקח את שאר המקום ודוחף את כפתור היציאה שמאלה */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #64748b; /* צבע אפור-כחלחל עדין */
+  font-size: 15px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* עיצוב בעת מעבר עכבר על הקישור */
+.nav-links a:hover {
+  color: #007bff;
+  background-color: #f0f7ff; /* רקע תכלת חלש מאוד */
+}
+
+/* עיצוב הקישור של העמוד בו אנחנו נמצאים כרגע (Active) */
+.nav-links a.active {
+  color: #007bff;
+  background-color: #e6f2ff;
+  font-weight: bold;
+}
+
+/* -- כפתור יציאה -- */
+.logout-btn {
+  background-color: transparent;
+  color: #ef4444; /* צבע אדום עדין */
+  border: 1px solid #ef4444;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #fef2f2;
+  box-shadow: 0 2px 6px rgba(239, 68, 68, 0.2);
+}
+
+/* -- אזור התוכן המשתנה (איפה שהעמודים עצמם מופיעים) -- */
+.content-area {
+  flex: 1;
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto; /* ממרכז את התוכן במסכים גדולים */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+/* -- סרגל הניווט (ההדר) -- */
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* דוחף את האלמנטים לקצוות ולמרכז */
+  background-color: #ffffff;
+  padding: 15px 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* טקסט הברכה בצד ימין */
+.user-welcome {
+  order: 1; /* קובע שהוא יהיה הראשון מצד ימין */
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  width: 150px; /* קיבוע רוחב כדי לשמור על מרכוז מדויק של האמצע */
+}
+
+/* -- אזור הקישורים ממורכז -- */
+.nav-links {
+  order: 2; /* קובע שהוא יהיה בדיוק באמצע */
+  display: flex;
+  gap: 20px; /* רווח יפה בין הקישורים */
+  justify-content: center;
+  flex: 1; /* מאפשר לו לתפוס את המקום המרכזי */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #64748b;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #007bff;
+  background-color: #f0f7ff;
+}
+
+.nav-links a.active {
+  color: #007bff;
+  background-color: #e6f2ff;
+  font-weight: bold;
+}
+
+/* -- כפתור יציאה בצד שמאל -- */
+.logout-btn {
+  order: 3; /* קובע שהוא יהיה האחרון (בצד שמאל) */
+  width: 150px; /* תואם לרוחב הברכה כדי שהאמצע יהיה מושלם */
+  background-color: transparent;
+  color: #ef4444;
+  border: 1px solid #ef4444;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #fef2f2;
+  box-shadow: 0 2px 6px rgba(239, 68, 68, 0.2);
+}
