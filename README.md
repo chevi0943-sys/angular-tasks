@@ -6,7 +6,7 @@
 
 task-manager: צד הלקוח (Frontend) שנבנה ב-Angular 20.
 
-WolfTasksServer-main: צד השרת (Backend) שנבנה ב-Node.js עם מסד נתונים SQLite.
+server: צד השרת (Backend) שנבנה ב-Node.js עם מסד נתונים SQLite.
 
 🛠 טכנולוגיות בשימוש
 Frontend: Angular 20, TypeScript, SCSS.
