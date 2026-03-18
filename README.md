@@ -1,42 +1,56 @@
-🚀 מערכת WolfTasks - ניהול משימות וצוותים
-מערכת Full-Stack מתקדמת לניהול פרויקטים ומשימות בתוך צוותים, בסגנון Kanban/ClickUp.
+# 🐺 WolfTasks - Team & Project Management System
 
-📂 מבנה הפרויקט
-הפרויקט מחולק לשני חלקים עיקריים:
+An advanced **Full-Stack** project management system designed for team collaboration and task tracking, inspired by **Kanban** and **ClickUp** workflows.
 
-task-manager: צד הלקוח (Frontend) שנבנה ב-Angular 20.
+---
 
-server: צד השרת (Backend) שנבנה ב-Node.js עם מסד נתונים SQLite.
+## 📂 Project Structure
+The project is divided into two main repositories/folders:
+* **`task-manager`**: The Frontend client built with **Angular 20**.
+* **`server`**: The Backend server built with **Node.js** and **SQLite** database.
 
-🛠 טכנולוגיות בשימוש
-Frontend: Angular 20, TypeScript, SCSS.
+---
 
-Authentication: JWT (JSON Web Token).
+## 🛠 Tech Stack
 
-Database: SQLite.
+### **Frontend**
+* **Framework:** Angular 20 (TypeScript)
+* **Styling:** SCSS
+* **Authentication:** JWT (JSON Web Token)
 
-🚀 הוראות התקנה והרצה
-1. הרצת צד השרת (Server)
-יש לוודא שהשרת פועל בכתובת http://localhost:3000.
+### **Backend**
+* **Runtime:** Node.js
+* **Database:** SQLite
+* **Architecture:** RESTful API
 
-Bash
+---
+
+## 🚀 Installation & Setup
+
+### 1. Run the Backend (Server)
+The server must be running at `http://localhost:3000` for the client to connect.
+```bash
 cd server
 npm install
 npm start
-2. הרצת צד הלקוח (Client)
-פתחי טרמינל חדש והריצי:
+2. Run the Frontend (Client)
+Open a new terminal and run:
 
 Bash
 cd task-manager
 npm install
 ng serve
-לאחר ההרצה, האפליקציה תהיה זמינה בכתובת: http://localhost:4200.
+After successful compilation, the app will be available at: http://localhost:4200.
 
-📋 תכונות עיקריות במערכת
-מערכת הזדהות: הרשמה והתחברות מאובטחת לקבלת Token.
+📋 Key Features
+Authentication System: Secure Registration and Login with token-based session management.
 
-ניהול צוותים: יצירת צוותים והוספת חברים.
+Team Management: Create teams and invite members to collaborate.
 
-ניהול פרויקטים: חלוקת העבודה בצוות לפי פרויקטים מוגדרים.
+Project Organization: Organize team workloads into specific, manageable projects.
 
-לוח משימות (Task Board): הוספה, עדכון (PATCH), מחיקה וניהול תגובות לכל משימה.
+Interactive Task Board: * Add, update (PATCH), and delete tasks.
+
+Real-time task comments for team communication.
+
+Status tracking for project transparency.
