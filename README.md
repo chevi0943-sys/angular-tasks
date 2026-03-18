@@ -1,4 +1,4 @@
-# 🐺 WolfTasks - Team & Project Management System
+# 👍 WolfTasks - Team & Project Management System
 
 An advanced **Full-Stack** project management system designed for team collaboration and task tracking, inspired by **Kanban** and **ClickUp** workflows.
 
